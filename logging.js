@@ -1,4 +1,4 @@
-const sessionID = require(__dirname + "/actions/sessionid.js")
+const sessionID = require(__dirname + "/sessionid.js")
 
 module.exports = (environment) => {
   return {
