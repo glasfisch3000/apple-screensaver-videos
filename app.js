@@ -1,14 +1,17 @@
+const { log, err, childLogger } = require(__dirname + "/logging.js")(["app"])
+
+log("importing modules")
 const express = require("express")
 const server = express()
-server.use(require("body-parser").urlencoded({ extended: false }))
-
 const http = require("http").Server(server)
 const port = 80
 
-const client = require("./client.js")
-
+log("configuring http server")
 server.get("/", (req, res) => {
   res.sendFile(__dirname + "/client/index.html")
 })
 
-http.listen(port, () => { console.log("[server] listening on port " + port) })
+log("starting http server")
+http.listen(port, () => {
+  log(`http server listening on port ${port}`)
+})
