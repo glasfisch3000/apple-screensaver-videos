@@ -125,3 +125,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# useless macOS shit
+.DS_Store
+*/.DS_Store
+
+# application data and cache
+data/*
