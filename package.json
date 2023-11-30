@@ -1,0 +1,19 @@
+{
+  "name": "apple-screensaver-videos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glasfisch3000/apple-screensaver-videos.git"
+  },
+  "author": "Jakob Danckwerts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glasfisch3000/apple-screensaver-videos/issues"
+  },
+  "homepage": "https://github.com/glasfisch3000/apple-screensaver-videos#readme"
+}
