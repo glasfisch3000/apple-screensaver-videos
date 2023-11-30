@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/glasfisch3000/apple-screensaver-videos/issues"
   },
-  "homepage": "https://github.com/glasfisch3000/apple-screensaver-videos#readme"
+  "homepage": "https://github.com/glasfisch3000/apple-screensaver-videos#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
