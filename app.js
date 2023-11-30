@@ -29,6 +29,10 @@ server.get("/", async (req, res) => {
   res.send(file)
 })
 
+server.get("/style", (req, res) => {
+  res.sendFile(__dirname + "/client/main.css")
+})
+
 log("starting http server")
 http.listen(port, () => {
   log(`http server listening on port ${port}`)
