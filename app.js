@@ -3,6 +3,8 @@ const { log, err, childLogger } = require(__dirname + "/logging.js")(["app"])
 log("importing modules")
 const fs = require("fs").promises
 
+const sessionID = require(__dirname + "/sessionid.js")
+
 const express = require("express")()
 const http = require("http").Server(express)
 const port = 80
@@ -13,10 +15,11 @@ log("configuring http server")
 
 const server = childLogger("server")
 express.get("/", async (req, res) => {
-  server.log("http get request: /")
+  const session = server.childLogger("session-" + sessionID())
+  session.log("http get request: /")
 
   try {
-    const assets = await loadAllAssets(childLogger)
+    const assets = await loadAllAssets(session.childLogger)
     const blocks = assets.map(asset =>
       `<a class="asset-link" href="${asset.url}">\n` +
       `  <div class="asset-container">\n` +
@@ -32,16 +35,18 @@ express.get("/", async (req, res) => {
 
     res.send(file)
   } catch(error) {
-    server.err(error)
+    session.err(error)
   }
 })
 
 express.get("/style", (req, res) => {
-  server.log("http get request: /style")
+  const session = server.childLogger("session-" + sessionID())
+  session.log("http get request: /style")
+
   try {
     res.sendFile(__dirname + "/client/main.css")
   } catch(error) {
-    server.err(error)
+    session.err(error)
   }
 })
 
