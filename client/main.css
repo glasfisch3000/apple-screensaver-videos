@@ -1,0 +1,60 @@
+body {
+  margin: 8px;
+}
+
+.content {
+  display: inline-grid;
+  grid-auto-flow: row dense;
+  margin: auto;
+  padding: 0px;
+}
+
+.asset-link {
+  display: inline-grid;
+  row-gap: 0px;
+  column-gap: 0px;
+
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  width: 240px;
+
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.asset-container {
+  display: grid;
+
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  padding: 0px;
+}
+
+.asset-thumbnail {
+  margin: auto;
+  width: 240px;
+  border-radius: 7px;
+}
+
+.asset-name {
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.asset-id {
+  margin: auto;
+  font-family: monospace;
+  font-size: 70%;
+  color: #888;
+}
