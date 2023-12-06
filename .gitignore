@@ -132,3 +132,6 @@ dist
 
 # application data and cache
 data/*
+
+# detached logs
+log/*
