@@ -131,7 +131,7 @@ dist
 */.DS_Store
 
 # application data and cache
-data/*
+data
 
 # detached logs
 log
