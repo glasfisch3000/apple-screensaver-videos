@@ -1,5 +1,5 @@
 services:
-  zokadictionary:
+  apple-screensaver-videos:
     image: ghcr.io/glasfisch3000/apple-screensaver-videos:main
     restart: unless-stopped
     container_name: apple-screensaver-videos
