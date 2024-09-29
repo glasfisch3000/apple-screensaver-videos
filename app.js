@@ -7,7 +7,8 @@ const sessionID = require(__dirname + "/sessionid.js")
 
 const express = require("express")()
 const http = require("http").Server(express)
-const port = 1618
+
+const port = parseInt(process.env["APPLE_SCREENSAVER_VIDEOS_PORT"] || 1618)
 
 const { loadAllAssets } = require(__dirname + "/data.js")
 

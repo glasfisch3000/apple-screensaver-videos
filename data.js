@@ -5,8 +5,8 @@ module.exports.loadAllAssets = async (logger) => {
 
   try {
     log("loading assets file")
-    const file = await fs.readFile(__dirname + "/data/entries.json")
-    const entries = JSON.parse(file)
+    const file = process.env["APPLE_SCREENSAVER_VIDEOS_ENTRIES_FILE"] || (__dirname + "/data/entries.json")
+    const entries = JSON.parse(await fs.readFile(file))
 
     const assets = entries.assets
     const results = []
